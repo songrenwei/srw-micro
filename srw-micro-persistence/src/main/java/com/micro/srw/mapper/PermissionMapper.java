@@ -1,7 +1,7 @@
 package com.micro.srw.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.micro.srw.domain.Permission;
+import com.micro.srw.entity.Permission;
 
 /**
  * @Description: TODO

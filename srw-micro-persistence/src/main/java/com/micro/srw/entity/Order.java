@@ -1,4 +1,4 @@
-package com.micro.srw.domain;
+package com.micro.srw.entity;
 
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
@@ -13,13 +13,13 @@ import lombok.ToString;
 @Data
 @ToString(callSuper = true)
 @EqualsAndHashCode(callSuper = true)
-@TableName(value = "t_permission", autoResultMap = true)
-public class Permission extends BaseEntity {
+@TableName(value = "t_order", autoResultMap = true)
+public class Order extends BaseEntity {
 
-    private String roleCode;
+    private String code;
 
-    private String target;
+    private String name;
 
-    private String operate;
+    private String createBy;
 
 }

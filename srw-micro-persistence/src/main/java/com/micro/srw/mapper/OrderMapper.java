@@ -1,7 +1,7 @@
 package com.micro.srw.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.micro.srw.domain.Order;
+import com.micro.srw.entity.Order;
 
 /**
  * @Description: TODO

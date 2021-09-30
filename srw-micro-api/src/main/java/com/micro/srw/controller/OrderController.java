@@ -2,7 +2,7 @@ package com.micro.srw.controller;
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.micro.srw.api.JsonResult;
-import com.micro.srw.domain.Order;
+import com.micro.srw.entity.Order;
 import com.micro.srw.service.OrderService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;

@@ -1,6 +1,7 @@
-package com.micro.srw.domain;
+package com.micro.srw.entity;
 
 import com.baomidou.mybatisplus.annotation.TableName;
+import com.micro.srw.enums.SexEnum;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.ToString;
@@ -19,5 +20,9 @@ public class User extends BaseEntity {
     private String username;
 
     private String password;
+
+    private Integer age;
+
+    private SexEnum sex;
 
 }

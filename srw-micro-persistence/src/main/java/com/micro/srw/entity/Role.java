@@ -1,4 +1,4 @@
-package com.micro.srw.domain;
+package com.micro.srw.entity;
 
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;

@@ -4,7 +4,7 @@ import cn.dev33.satoken.stp.StpUtil;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.micro.srw.domain.Order;
+import com.micro.srw.entity.Order;
 import com.micro.srw.mapper.OrderMapper;
 import com.micro.srw.util.CodeUtils;
 import lombok.RequiredArgsConstructor;

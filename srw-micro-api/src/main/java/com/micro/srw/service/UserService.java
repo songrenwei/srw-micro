@@ -4,9 +4,9 @@ import cn.dev33.satoken.stp.SaTokenInfo;
 import cn.dev33.satoken.stp.StpUtil;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.micro.srw.domain.Permission;
-import com.micro.srw.domain.Role;
-import com.micro.srw.domain.User;
+import com.micro.srw.entity.Permission;
+import com.micro.srw.entity.Role;
+import com.micro.srw.entity.User;
 import com.micro.srw.exception.BusinessException;
 import com.micro.srw.mapper.PermissionMapper;
 import com.micro.srw.mapper.RoleMapper;
@@ -37,7 +37,7 @@ public class UserService {
     public Map<String, String> login(String username, String password) {
         User user = getUserByUsername(username);
         if (user == null) {
-            throw new BusinessException("用户名或密码错误");
+            throw new BusinessException("用户名或密码错误!");
         }
         if (!StringUtils.equals(user.getPassword(), password)) {
             throw new BusinessException("用户名或密码错误");
