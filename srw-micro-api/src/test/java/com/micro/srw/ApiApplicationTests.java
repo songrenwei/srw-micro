@@ -10,11 +10,11 @@ import com.micro.srw.mapper.OrderMapper;
 import com.micro.srw.mapper.UserMapper;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import javax.annotation.Resource;
+import java.time.LocalDateTime;
 
 @SpringBootTest
 @RunWith(SpringRunner.class)
@@ -51,9 +51,10 @@ public class ApiApplicationTests {
 
     @Test
     public void test4() {
-        // 单纯只更新某一个字段
+        // 单纯只更新指定字段
         ChainWrappers.lambdaUpdateChain(orderMapper)
                 .set(Order::getName, "西瓜")
+                .set(Order::getUpdateTime, LocalDateTime.now())
                 .eq(Order::getId, 4)
                 .update();
     }
