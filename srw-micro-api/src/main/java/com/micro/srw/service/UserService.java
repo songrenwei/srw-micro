@@ -76,9 +76,7 @@ public class UserService {
      */
     public String getRoleByUserId(Long userId) {
         // 角色
-        LambdaQueryWrapper<Role> eq = new QueryWrapper<Role>().lambda()
-                .eq(Role::getUserId, userId)
-                .eq(Role::getIsDelete, false);
+        LambdaQueryWrapper<Role> eq = new QueryWrapper<Role>().lambda().eq(Role::getUserId, userId);
         return Optional.ofNullable(roleMapper.selectOne(eq)).orElseGet(Role::new).getRoleCode();
     }
 

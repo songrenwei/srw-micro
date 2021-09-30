@@ -29,7 +29,7 @@ public class BaseEntity {
      * 逻辑删除
      */
     @TableLogic
-    private Boolean isDelete = false;
+    private Boolean isDelete;
 
     /**
      * 创建时间
