@@ -36,9 +36,12 @@ public class ApiApplicationTests {
 
     @Test
     public void test2() {
-        LambdaQueryWrapper<Order> eq = Wrappers.<Order>lambdaQuery().eq(Order::getId, 1);
+        LambdaQueryWrapper<Order> eq = Wrappers.<Order>lambdaQuery().eq(Order::getId, 5);
         Order order = orderMapper.selectOne(eq);
         System.out.println(order);
+
+        order.setName("梨子");
+        orderMapper.updateById(order);
     }
 
     @Test
@@ -48,6 +51,7 @@ public class ApiApplicationTests {
 
     @Test
     public void test4() {
+        // 单纯只更新某一个字段
         ChainWrappers.lambdaUpdateChain(orderMapper)
                 .set(Order::getName, "西瓜")
                 .eq(Order::getId, 4)
