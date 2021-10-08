@@ -30,10 +30,6 @@
             <artifactId>sa-token-dao-redis-jackson</artifactId>
             <version>1.24.0</version>
         </dependency>
-        <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-pool2</artifactId>
-        </dependency>
         <!-- srw-sa-token通用依赖 -->
         <dependency>
             <groupId>com.micro.srw</groupId>
@@ -52,6 +48,7 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>${spring-boot.version}</version>
                 <executions>
                     <execution>
                         <goals>

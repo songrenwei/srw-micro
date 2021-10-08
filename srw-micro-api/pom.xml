@@ -31,16 +31,6 @@
             <artifactId>sa-token-dao-redis-jackson</artifactId>
             <version>1.24.0</version>
         </dependency>
-        <!-- 提供Redis连接池 -->
-        <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-pool2</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.micro.srw</groupId>
-            <artifactId>srw-micro-common</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
         <dependency>
             <groupId>com.micro.srw</groupId>
             <artifactId>srw-micro-persistence</artifactId>
@@ -58,6 +48,7 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>${spring-boot.version}</version>
                 <executions>
                     <execution>
                         <goals>

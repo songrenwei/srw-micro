@@ -6,14 +6,15 @@
 
     <groupId>com.micro.srw</groupId>
     <artifactId>srw-micro</artifactId>
-    <packaging>pom</packaging>
     <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <name>srw-micro</name>
 
     <modules>
         <module>srw-micro-common</module>
         <module>srw-micro-gateway</module>
-        <module>srw-micro-api</module>
         <module>srw-micro-persistence</module>
+        <module>srw-micro-api</module>
     </modules>
 
     <properties>
@@ -22,7 +23,7 @@
         <maven.compiler.target>${java.version}</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <spring-boot.version>2.3.2.RELEASE</spring-boot.version>
+        <spring-boot.version>2.3.5.RELEASE</spring-boot.version>
         <spring-cloud.version>Hoxton.SR9</spring-cloud.version>
         <spring-cloud-alibaba.version>2.2.6.RELEASE</spring-cloud-alibaba.version>
         <mybatisplus.version>3.4.2</mybatisplus.version>
@@ -71,24 +72,5 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
-
-    <dependencies>
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <optional>true</optional>
-        </dependency>
-    </dependencies>
-
-    <build>
-        <!--        <finalName>${project.artifactId}</finalName>-->
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-                <version>${spring-boot.version}</version>
-            </plugin>
-        </plugins>
-    </build>
 
 </project>
