@@ -62,6 +62,15 @@ public class UserService {
         return tokenMap;
     }
 
+    public Boolean isLogin() {
+        return StpUtil.isLogin();
+    }
+
+    public Boolean logout() {
+        StpUtil.logout();
+        return Boolean.TRUE;
+    }
+
     /**
      * 根据用户名获取用户信息
      */

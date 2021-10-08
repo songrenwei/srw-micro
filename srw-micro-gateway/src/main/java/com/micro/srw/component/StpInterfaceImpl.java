@@ -27,8 +27,8 @@ public class StpInterfaceImpl implements StpInterface {
     }
 
     public <T> List<T> toList(Object obj, Class<T> clazz) {
-        List<T> result = new ArrayList<>();
         if(obj instanceof List<?>) {
+            List<T> result = new ArrayList<>();
             for (Object o : (List<?>) obj) {
                 result.add(clazz.cast(o));
             }
