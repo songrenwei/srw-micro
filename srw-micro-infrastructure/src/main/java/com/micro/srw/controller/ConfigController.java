@@ -4,10 +4,7 @@ import com.micro.srw.api.JsonResult;
 import com.micro.srw.entity.User;
 import com.micro.srw.service.ConfigService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -45,6 +42,12 @@ public class ConfigController {
     @GetMapping("/permission/query")
     public JsonResult<List<String>> queryPermissionByRoleCode(@RequestParam String roleCode) {
         return JsonResult.success(configService.queryPermissionByRoleCode(roleCode));
+    }
+
+    @DeleteMapping("/clear")
+    public JsonResult<?> clear(@RequestParam String key) {
+        configService.clear(key);
+        return JsonResult.success();
     }
 
 }

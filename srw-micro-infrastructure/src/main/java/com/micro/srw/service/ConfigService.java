@@ -17,4 +17,6 @@ public interface ConfigService {
 
     List<String> queryPermissionByRoleCode(String roleCode);
 
+    void clear(String key);
+
 }

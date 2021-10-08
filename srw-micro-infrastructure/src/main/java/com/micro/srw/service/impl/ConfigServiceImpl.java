@@ -10,6 +10,7 @@ import com.micro.srw.mapper.RoleMapper;
 import com.micro.srw.mapper.UserMapper;
 import com.micro.srw.service.ConfigService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
@@ -33,6 +34,7 @@ public class ConfigServiceImpl implements ConfigService {
     @Override
     @Cacheable(key = "'user_'+ #username", value = "30d")
     public User queryUserByUsername(String username) {
+        // 用户
         LambdaQueryWrapper<User> eq = new QueryWrapper<User>().lambda().eq(User::getUsername, username);
         return userMapper.selectOne(eq);
     }
@@ -53,5 +55,12 @@ public class ConfigServiceImpl implements ConfigService {
         List<Permission> permissionList = permissionMapper.selectList(eq);
         return permissionList.stream().map(Permission::getOperate).collect(Collectors.toList());
     }
+
+    @Override
+    @CacheEvict(key = "#key", value = "30d")
+    public void clear(String key) {
+
+    }
+
 
 }
