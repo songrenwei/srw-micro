@@ -12,6 +12,7 @@
 
     <modules>
         <module>srw-micro-common</module>
+        <module>srw-micro-infrastructure</module>
         <module>srw-micro-gateway</module>
         <module>srw-micro-persistence</module>
         <module>srw-micro-api</module>

@@ -1,4 +1,4 @@
-package com.micro.srw.util;
+package com.micro.srw.utils;
 
 import java.util.UUID;
 

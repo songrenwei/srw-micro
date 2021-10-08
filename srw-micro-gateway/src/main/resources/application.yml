@@ -23,6 +23,8 @@ spring:
         locator:
           enabled: true #开启从注册中心动态创建路由的功能
           lower-case-service-id: true #使用小写服务名，默认是大写
+  zipkin:
+    base-url: http://localhost:9411
   # redis配置
   redis:
     # Redis数据库索引（默认为0）

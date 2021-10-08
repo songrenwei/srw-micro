@@ -6,7 +6,7 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.micro.srw.entity.Order;
 import com.micro.srw.mapper.OrderMapper;
-import com.micro.srw.util.CodeUtils;
+import com.micro.srw.utils.CodeUtils;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
