@@ -1,0 +1,38 @@
+server:
+  port: 9504
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: always
+
+spring:
+  profiles:
+    active: dev
+    include: common, persistence
+  application:
+    name: srw-micro-query
+  datasource:
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://127.0.0.1:3306/user?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=GMT%2B8
+      username: root
+      password: root_pwd
+      max-active: 20
+      initial-size: 10
+      max-wait: 60000
+      min-idle: 10
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+  zipkin:
+    base-url: http://localhost:9411
+
+logging:
+  file:
+    path: D://project//logs

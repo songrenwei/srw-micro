@@ -70,14 +70,14 @@ public class JobTemplate<T> {
                     executor.shutdown();
                     executor.awaitTermination(1, TimeUnit.MINUTES);
                 } catch (InterruptedException e) {
-                    XxlJobHelper.log("关闭线程池发生异常", e);
+                    log.info("关闭线程池发生异常", e);
                 }
             }
         } catch (Exception e) {
             log.info("计划任务执行异常！", e);
         }
 
-        XxlJobHelper.log("{}计划任务执行完毕,执行时间为{}ms", jobName, System.currentTimeMillis() - start);
+        log.info("{}计划任务执行完毕,执行时间为{}ms", jobName, System.currentTimeMillis() - start);
     }
 
 }
