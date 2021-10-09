@@ -36,6 +36,7 @@ public class LogAspect {
         // 调用前
         long start = System.currentTimeMillis();
         ServletRequestAttributes attributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
+        assert attributes != null;
         HttpServletRequest request = attributes.getRequest();
         Object result = point.proceed();
         // 调用后
