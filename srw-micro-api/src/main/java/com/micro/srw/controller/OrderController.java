@@ -1,7 +1,8 @@
 package com.micro.srw.controller;
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.micro.srw.api.JsonResult;
+import com.micro.srw.annotation.Log;
+import com.micro.srw.bean.JsonResult;
 import com.micro.srw.entity.Order;
 import com.micro.srw.service.OrderService;
 import lombok.RequiredArgsConstructor;
@@ -31,21 +32,25 @@ public class OrderController {
         return JsonResult.success(orderService.listByPage(pageNum, pageSize));
     }
 
+    @Log
     @GetMapping("/get/{id}")
     public JsonResult<Order> get(@PathVariable("id") Long id) {
         return JsonResult.success(orderService.get(id));
     }
 
+    @Log
     @PostMapping("/create")
     public JsonResult<Boolean> create(@RequestBody Order brand) {
         return JsonResult.success(orderService.create(brand));
     }
 
+    @Log
     @PostMapping("/update")
     public JsonResult<Boolean> update(@RequestBody Order brand) {
         return JsonResult.success(orderService.update(brand));
     }
 
+    @Log
     @PostMapping("/delete")
     public JsonResult<Boolean> delete(Long id) {
         return JsonResult.success(orderService.delete(id));

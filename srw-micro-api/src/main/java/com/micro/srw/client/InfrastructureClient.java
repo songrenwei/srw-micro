@@ -1,6 +1,6 @@
 package com.micro.srw.client;
 
-import com.micro.srw.api.JsonResult;
+import com.micro.srw.bean.JsonResult;
 import com.micro.srw.entity.User;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;

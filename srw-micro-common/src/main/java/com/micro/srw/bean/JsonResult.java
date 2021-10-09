@@ -1,4 +1,4 @@
-package com.micro.srw.api;
+package com.micro.srw.bean;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.micro.srw.constant.Constants;

@@ -1,6 +1,6 @@
 package com.micro.srw.controller;
 
-import com.micro.srw.api.JsonResult;
+import com.micro.srw.bean.JsonResult;
 import com.micro.srw.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
