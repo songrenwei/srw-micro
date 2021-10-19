@@ -2,6 +2,7 @@ package com.micro.srw.service;
 
 import cn.dev33.satoken.stp.SaTokenInfo;
 import cn.dev33.satoken.stp.StpUtil;
+import com.micro.srw.bean.TokenDto;
 import com.micro.srw.client.InfrastructureClient;
 import com.micro.srw.entity.User;
 import com.micro.srw.exception.BusinessException;
@@ -9,9 +10,7 @@ import lombok.RequiredArgsConstructor;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Service;
 
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 /**
  * @Description:
@@ -24,7 +23,7 @@ public class UserService {
 
     private final InfrastructureClient infrastructureClient;
 
-    public Map<String, String> login(String username, String password) {
+    public TokenDto login(String username, String password) {
         User user = infrastructureClient.queryUserByUsername(username).getData();
         if (user == null) {
             throw new BusinessException("用户名或密码错误!");
@@ -47,10 +46,10 @@ public class UserService {
         if (saTokenInfo == null) {
             throw new BusinessException("用户名或密码错误");
         }
-        Map<String, String> tokenMap = new HashMap<>();
-        tokenMap.put("token", saTokenInfo.getTokenValue());
-        tokenMap.put("tokenHead", saTokenInfo.getTokenName());
-        return tokenMap;
+        TokenDto tokenDto = new TokenDto();
+        tokenDto.setToken(saTokenInfo.getTokenValue());
+        tokenDto.setTokenHead(saTokenInfo.getTokenName());
+        return tokenDto;
     }
 
     public Boolean isLogin() {

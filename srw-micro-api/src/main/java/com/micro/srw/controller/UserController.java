@@ -1,6 +1,7 @@
 package com.micro.srw.controller;
 
 import com.micro.srw.bean.JsonResult;
+import com.micro.srw.bean.TokenDto;
 import com.micro.srw.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
@@ -21,7 +22,7 @@ public class UserController {
      * 登录
      */
     @PostMapping("/login")
-    public JsonResult<?> login(@RequestParam String username, @RequestParam String password) {
+    public JsonResult<TokenDto> login(@RequestParam String username, @RequestParam String password) {
         return JsonResult.success(loginService.login(username, password));
     }
 

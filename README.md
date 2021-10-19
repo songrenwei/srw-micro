@@ -4,7 +4,7 @@
 
 1. srw-micro-gateway: 微服务网关，使用spring-cloud-gateway
 
-2. srw-micro-persistence：持久层，数据库为mysql，持久框架为mybatis、mybatis-plus
+2. srw-micro-persistence：持久层，数据库为mysql，持久层框架为mybatis、mybatis-plus
 
 3. srw-micro-common: 通用模块，包括全局配置、通用工具等
 
