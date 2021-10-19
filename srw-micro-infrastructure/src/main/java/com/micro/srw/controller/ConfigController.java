@@ -49,9 +49,8 @@ public class ConfigController {
     }
 
     @DeleteMapping("/clear")
-    public JsonResult<?> clear(@RequestParam String key) {
+    public void clear(@RequestParam String key) {
         configService.clear(key);
-        return JsonResult.success();
     }
 
 }

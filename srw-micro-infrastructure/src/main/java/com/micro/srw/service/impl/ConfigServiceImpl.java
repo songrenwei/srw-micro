@@ -59,8 +59,7 @@ public class ConfigServiceImpl implements ConfigService {
     @Override
     @CacheEvict(key = "#key", value = "30d")
     public void clear(String key) {
-
+        // do nothing
     }
-
 
 }
