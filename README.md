@@ -10,6 +10,10 @@
 
 4. srw-micro-infrastructure: 基础服务模块，包括配置表、影像件服务等
 
-5. srw-micro-query: 查询模块，只提供数据查询服务
+5. srw-micro-schedule: 定时任务模块, 使用分布式定时任务xxl-job
 
-6. srw-micro-schedule: 定时任务模块, 使用分布式定时任务xxl-job
+6. srw-micro-query: 查询模块，只提供数据查询服务
+
+7. srw-micro-api: 业务模块
+
+
