@@ -14,7 +14,7 @@ import lombok.Getter;
 public enum GenderEnum implements IEnum<Integer> {
 
     FEMALE(0, "女性"),
-    MAIL(1, "男性");
+    MALE(1, "男性");
 
     private final Integer code;
     private final String desc;

@@ -1,40 +1,4 @@
-server:
-  port: 9503
-
-management:
-  endpoints:
-    web:
-      exposure:
-        include: '*'
-  endpoint:
-    health:
-      show-details: always
-
 spring:
-  profiles:
-    active: dev
-    include: common
-  application:
-    name: srw-micro-schedule
-  cloud:
-    nacos:
-      discovery:
-        server-addr: localhost:8848
-  zipkin:
-    base-url: http://localhost:9411
-logging:
-  file:
-    path: D://project//logs
-xxl:
-  job:
-    accessToken: ''
-    admin:
-      addresses: http://127.0.0.1:8080/xxl-job-admin
-    executor:
-      address: ''
-      appname: xxl-job-executor
-      ip: ''
-      logpath: D:\project\logs\xxl-job\jobhandler
-      logretentiondays: 30
-      port: 9999
+    profiles:
+        active: dev
 
